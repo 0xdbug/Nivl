@@ -9,14 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController, Storyboarded {
     weak var coordinator: AppCoordinator?
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func viewDetail(_ sender: Any) {
-        coordinator?.viewDetail()
     }
     
 }

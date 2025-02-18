@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		70B98C592D65178F0017F192 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 70B98C582D65178F0017F192 /* RxSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		704718992D64F17B00796C4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B98C592D65178F0017F192 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = Nivl;
 			packageProductDependencies = (
+				70B98C582D65178F0017F192 /* RxSwift */,
 			);
 			productName = Nivl;
 			productReference = 704718822D64F17800796C4D /* Nivl.app */;
@@ -209,7 +215,7 @@
 			mainGroup = 704718792D64F17800796C4D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				704718B72D64F30F00796C4D /* XCRemoteSwiftPackageReference "RxSwift" */,
+				70B98C572D65178F0017F192 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 704718832D64F17800796C4D /* Products */;
@@ -578,7 +584,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		704718B72D64F30F00796C4D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		70B98C572D65178F0017F192 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -587,6 +593,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70B98C582D65178F0017F192 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70B98C572D65178F0017F192 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7047187A2D64F17800796C4D /* Project object */;
 }
