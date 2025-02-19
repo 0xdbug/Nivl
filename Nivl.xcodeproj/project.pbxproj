@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70B98C592D65178F0017F192 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 70B98C582D65178F0017F192 /* RxSwift */; };
+		700670E12D6601A600AA0F86 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 700670E02D6601A600AA0F86 /* RxCocoa */; };
+		700670E32D6601A600AA0F86 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 700670E22D6601A600AA0F86 /* RxSwift */; };
+		70639C692D6603DB0031E02D /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 70639C682D6603DB0031E02D /* Nuke */; };
+		70639C6B2D6603DB0031E02D /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 70639C6A2D6603DB0031E02D /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B98C592D65178F0017F192 /* RxSwift in Frameworks */,
+				70639C692D6603DB0031E02D /* Nuke in Frameworks */,
+				700670E32D6601A600AA0F86 /* RxSwift in Frameworks */,
+				700670E12D6601A600AA0F86 /* RxCocoa in Frameworks */,
+				70639C6B2D6603DB0031E02D /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +136,10 @@
 			);
 			name = Nivl;
 			packageProductDependencies = (
-				70B98C582D65178F0017F192 /* RxSwift */,
+				700670E02D6601A600AA0F86 /* RxCocoa */,
+				700670E22D6601A600AA0F86 /* RxSwift */,
+				70639C682D6603DB0031E02D /* Nuke */,
+				70639C6A2D6603DB0031E02D /* NukeUI */,
 			);
 			productName = Nivl;
 			productReference = 704718822D64F17800796C4D /* Nivl.app */;
@@ -215,7 +224,8 @@
 			mainGroup = 704718792D64F17800796C4D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				70B98C572D65178F0017F192 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				700670DF2D6601A600AA0F86 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				70639C672D6603DB0031E02D /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 704718832D64F17800796C4D /* Products */;
@@ -584,7 +594,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		70B98C572D65178F0017F192 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		700670DF2D6601A600AA0F86 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -592,13 +602,36 @@
 				minimumVersion = 6.9.0;
 			};
 		};
+		70639C672D6603DB0031E02D /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		70B98C582D65178F0017F192 /* RxSwift */ = {
+		700670E02D6601A600AA0F86 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 70B98C572D65178F0017F192 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 700670DF2D6601A600AA0F86 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		700670E22D6601A600AA0F86 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 700670DF2D6601A600AA0F86 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		70639C682D6603DB0031E02D /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70639C672D6603DB0031E02D /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		70639C6A2D6603DB0031E02D /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70639C672D6603DB0031E02D /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

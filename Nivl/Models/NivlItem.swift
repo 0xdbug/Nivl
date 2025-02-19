@@ -9,6 +9,16 @@
 
 
 struct NivlItem {
+    let headerImage: String
+    let title: String
+    
+    static let sample: [NivlItem] = {
+        let sam = NivlItem(headerImage: "https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw", title: "TitleGoogle")
+        let sa = NivlItem(headerImage: "https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw", title: "TitleGoogle2")
+        
+        
+        return [sam, sa, sam, sa, sam, sa, sam, sa, sam, sa, sam, sa]
+    }()
     
 }
 

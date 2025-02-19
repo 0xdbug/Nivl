@@ -22,24 +22,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wpR-YH-wdL">
-                                    <size key="itemSize" width="305" height="250"/>
+                                    <size key="itemSize" width="386" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nivlMainCell" id="ifC-a3-NxW" customClass="NivlCollectionViewCell" customModule="Nivl" customModuleProvider="target">
-                                        <rect key="frame" x="44" y="0.0" width="305" height="250"/>
+                                        <rect key="frame" x="3.6666666666666665" y="0.0" width="386" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GP1-tP-Xj0">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JW6-uy-Yjt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="305" height="164.66666666666666"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="386" height="164.66666666666666"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-4V-0w7">
-                                                    <rect key="frame" x="8" y="172.66666666666666" width="289" height="20.333333333333343"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-4V-0w7">
+                                                    <rect key="frame" x="8" y="172.66666666666666" width="370" height="20.333333333333343"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="JW6-uy-Yjt" secondAttribute="trailing" id="utj-e3-JXW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="305" height="250"/>
+                                        <size key="customSize" width="386" height="250"/>
                                         <connections>
                                             <outlet property="imageView" destination="JW6-uy-Yjt" id="PlG-fi-xbV"/>
                                             <outlet property="titleLabel" destination="F2J-4V-0w7" id="TZI-Lf-jnN"/>
