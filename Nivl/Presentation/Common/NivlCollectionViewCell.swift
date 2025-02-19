@@ -12,21 +12,29 @@ class NivlCollectionViewCell: UICollectionViewCell {
     static let id = "nivlMainCell"
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    func setup() {
+        layer.cornerRadius = 15
+        backgroundColor = UIColor.secondarySystemBackground
+    }
  
     func configureWithItem(item: NivlItem) async {
-        let url = URL(string: item.headerImage) ?? URL(string: "")!
+        setup()
+        dateLabel.text = item.date
+        titleLabel.text = item.title
+        
         do {
-            try await loadImage(url)
+            try await loadImage(item.headerImageURL)
         } catch {
             print("Failed to load image")
         }
-        titleLabel.text = item.title
     }
     
     func loadImage(_ url: URL) async throws {
         let imageTask = ImagePipeline.shared.imageTask(with: url)
-        for await progress in imageTask.progress {
+        for await _ in imageTask.progress {
             // Update progress
         }
         imageView.image = try await imageTask.image

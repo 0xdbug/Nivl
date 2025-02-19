@@ -7,19 +7,24 @@
 
 //{"collection":{"version":"1.1","href":"http://images-api.nasa.gov/search?q=iss026-s-001","items":[{"href":"https://images-assets.nasa.gov/image/iss026-s-001/collection.json","data":[{"center":"JSC","date_created":"2010-04-14T00:00:00Z","description":"ISS026-S-001 (June 2010) --- ","media_type":"image","nasa_id":"iss026-s-001","title":"iss026-s-001"}],"links":[{"href":"https://images-assets.nasa.gov/image/iss026-s-001/iss026-s-001~medium.jpg","rel":"alternate","render":"image","width":1280,"size":212000,"height":1256},{"href":"https://images-assets.nasa.gov/image/iss026-s-001/iss026-s-001~small.jpg","rel":"alternate","render":"image","width":640,"size":74000,"height":628},{"href":"https://images-assets.nasa.gov/image/iss026-s-001/iss026-s-001~thumb.jpg","rel":"preview","render":"image","width":640,"size":74000,"height":628},{"href":"https://images-assets.nasa.gov/image/iss026-s-001/iss026-s-001~large.jpg","rel":"alternate","render":"image","width":1920,"size":377000,"height":1884},{"href":"https://images-assets.nasa.gov/image/iss026-s-001/iss026-s-001~orig.jpg","rel":"canonical","render":"image","height":3926,"width":4000,"size":1525000}]}],"metadata":{"total_hits":1}}}
 
+import UIKit
 
 struct NivlItem {
     let headerImage: String
+    let date: String
     let title: String
     
+    var headerImageURL: URL {
+        URL(string: headerImage) ?? URL(string: "")!
+    }
+    
     static let sample: [NivlItem] = {
-        let sam = NivlItem(headerImage: "https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw", title: "TitleGoogle")
-        let sa = NivlItem(headerImage: "https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw", title: "TitleGoogle2")
+        let sam = NivlItem(headerImage: "https://nasa-api-explorer.vercel.app/_next/image?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA22350%2FPIA22350~small.jpg&w=3840&q=75", date: "2025-03-4", title: "Kepler Beyond Planets: Finding Exploding Stars (Core Collapse Supernova)")
+        let sa = NivlItem(headerImage: "https://nasa-api-explorer.vercel.app/_next/image?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA06909%2FPIA06909~medium.jpg&w=3840&q=75", date: "2025-03-4", title: "Kepler Supernova Remnant: A View from Hubble Space Telescope")
         
         
         return [sam, sa, sam, sa, sam, sa, sam, sa, sam, sa, sam, sa]
     }()
-    
 }
 
 struct Collection: Codable {
