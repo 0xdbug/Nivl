@@ -17,16 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UDB-kD-aAm">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UDB-kD-aAm" customClass="MainCollectionView" customModule="Nivl" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TlO-51-2A3">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="Tss-jd-9yG"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nivlMainCell" id="ifC-a3-NxW" customClass="NivlCollectionViewCell" customModule="Nivl" customModuleProvider="target">
                                         <rect key="frame" x="26.666666666666668" y="0.0" width="340" height="317"/>
@@ -39,7 +33,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="340" height="199"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-4V-0w7">
-                                                    <rect key="frame" x="14" y="209" width="312" height="18"/>
+                                                    <rect key="frame" x="14" y="215" width="312" height="18"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -57,13 +51,13 @@
                                             <constraints>
                                                 <constraint firstItem="F2J-4V-0w7" firstAttribute="leading" secondItem="GP1-tP-Xj0" secondAttribute="leading" constant="14" id="7D4-aS-lZu"/>
                                                 <constraint firstAttribute="trailing" secondItem="F2J-4V-0w7" secondAttribute="trailing" constant="14" id="DOM-s3-MjN"/>
-                                                <constraint firstItem="F2J-4V-0w7" firstAttribute="top" secondItem="JW6-uy-Yjt" secondAttribute="bottom" constant="10" id="T2b-qO-9QE"/>
+                                                <constraint firstItem="F2J-4V-0w7" firstAttribute="top" secondItem="JW6-uy-Yjt" secondAttribute="bottom" constant="16" id="T2b-qO-9QE"/>
                                                 <constraint firstAttribute="trailing" secondItem="JW6-uy-Yjt" secondAttribute="trailing" id="U2j-af-Az1"/>
                                                 <constraint firstItem="3DW-U9-Tqu" firstAttribute="leading" secondItem="GP1-tP-Xj0" secondAttribute="leading" constant="14" id="hnx-QK-LxI"/>
                                                 <constraint firstAttribute="bottom" secondItem="3DW-U9-Tqu" secondAttribute="bottom" constant="27" id="k06-h3-tRg"/>
                                                 <constraint firstItem="JW6-uy-Yjt" firstAttribute="top" secondItem="GP1-tP-Xj0" secondAttribute="top" id="oHW-I9-XcB"/>
                                                 <constraint firstItem="JW6-uy-Yjt" firstAttribute="leading" secondItem="GP1-tP-Xj0" secondAttribute="leading" id="oLN-Au-F6Z"/>
-                                                <constraint firstItem="3DW-U9-Tqu" firstAttribute="top" secondItem="F2J-4V-0w7" secondAttribute="bottom" constant="10" id="sgP-1a-Jdb"/>
+                                                <constraint firstItem="3DW-U9-Tqu" firstAttribute="top" secondItem="F2J-4V-0w7" secondAttribute="bottom" constant="4" id="sgP-1a-Jdb"/>
                                                 <constraint firstAttribute="trailing" secondItem="3DW-U9-Tqu" secondAttribute="trailing" constant="14" id="xb6-7i-U6P"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -79,9 +73,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UDB-kD-aAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6AT-uY-xow"/>
+                            <constraint firstItem="UDB-kD-aAm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nxs-JS-wlz"/>
+                            <constraint firstItem="UDB-kD-aAm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fuR-Qa-tWp"/>
+                            <constraint firstAttribute="bottom" secondItem="UDB-kD-aAm" secondAttribute="bottom" id="zHB-uK-shH"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="UDB-kD-aAm" id="c7j-OY-afA"/>
+                        <outlet property="collectionView" destination="UDB-kD-aAm" id="YRu-bh-tZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
