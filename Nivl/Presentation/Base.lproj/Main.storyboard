@@ -96,21 +96,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="im detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXQ-O5-IAT">
-                                <rect key="frame" x="157" y="322" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="law-V3-LHD">
+                                <rect key="frame" x="10" y="59" width="373" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="79Z-Gt-7GE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEL-5H-WYw">
+                                <rect key="frame" x="16" y="267" width="361" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-sE-F8N">
+                                <rect key="frame" x="16" y="294.33333333333331" width="361" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mYZ-HB-15l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mYZ-HB-15l" firstAttribute="trailing" secondItem="4aO-sE-F8N" secondAttribute="trailing" constant="16" id="4TU-SV-pMn"/>
+                            <constraint firstItem="4aO-sE-F8N" firstAttribute="leading" secondItem="mYZ-HB-15l" secondAttribute="leading" constant="16" id="7Dc-xI-l8F"/>
+                            <constraint firstItem="law-V3-LHD" firstAttribute="top" secondItem="mYZ-HB-15l" secondAttribute="top" id="BzP-P9-rdx"/>
+                            <constraint firstItem="mYZ-HB-15l" firstAttribute="trailing" secondItem="iEL-5H-WYw" secondAttribute="trailing" constant="16" id="I5q-4a-9Cv"/>
+                            <constraint firstItem="law-V3-LHD" firstAttribute="trailing" secondItem="mYZ-HB-15l" secondAttribute="trailing" constant="-10" id="S03-fV-SHS"/>
+                            <constraint firstItem="4aO-sE-F8N" firstAttribute="top" secondItem="iEL-5H-WYw" secondAttribute="bottom" constant="8" symbolic="YES" id="X4c-7b-wHc"/>
+                            <constraint firstItem="law-V3-LHD" firstAttribute="leading" secondItem="mYZ-HB-15l" secondAttribute="leading" constant="10" id="bLI-Wp-0jJ"/>
+                            <constraint firstItem="iEL-5H-WYw" firstAttribute="top" secondItem="law-V3-LHD" secondAttribute="bottom" constant="8" id="jN7-j3-Tpw"/>
+                            <constraint firstItem="iEL-5H-WYw" firstAttribute="leading" secondItem="mYZ-HB-15l" secondAttribute="leading" constant="16" id="r2r-0x-I2J"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="4aO-sE-F8N" id="uJL-dp-Qjz"/>
+                        <outlet property="imageView" destination="law-V3-LHD" id="xCv-hS-WU5"/>
+                        <outlet property="titleLabel" destination="iEL-5H-WYw" id="7fN-vi-6hj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HwB-mi-ype" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="-2"/>
+            <point key="canvasLocation" x="958" y="-2"/>
         </scene>
     </scenes>
     <resources>

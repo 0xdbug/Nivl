@@ -26,18 +26,10 @@ class NivlCollectionViewCell: UICollectionViewCell {
         titleLabel.text = item.title
         
         do {
-            try await loadImage(item.headerImageURL)
+            try await imageView.loadImage(item.headerImageURL)
         } catch {
             print("Failed to load image")
         }
-    }
-    
-    func loadImage(_ url: URL) async throws {
-        let imageTask = ImagePipeline.shared.imageTask(with: url)
-        for await _ in imageTask.progress {
-            // Update progress
-        }
-        imageView.image = try await imageTask.image
     }
     
 }

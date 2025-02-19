@@ -30,8 +30,10 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(home, animated: true)
     }
     
-    func viewDetail() {
+    func viewDetail(_ item: NivlItem) {
+        let detailViewModel = DetailViewModel(item: item)
         let detail = DetailViewController.instantiate()
+        detail.viewModel = detailViewModel
         navigationController.pushViewController(detail, animated: true)
     }
     

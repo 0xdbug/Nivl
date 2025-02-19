@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, Storyboarded {
         
         setupSearchObserver()
         setupCollectionView()
+        setupCollectionViewTapHandling()
     }
     
     func setupCollectionView() {
@@ -34,6 +35,16 @@ class HomeViewController: UIViewController, Storyboarded {
                     }
                 }
                 .disposed(by: disposeBag)
+    }
+    
+    func setupCollectionViewTapHandling() {
+        collectionView
+            .rx
+            .modelSelected(NivlItem.self)
+            .subscribe(onNext: { [unowned self] item in
+                coordinator?.viewDetail(item)
+            })
+            .disposed(by: disposeBag)
     }
     
     func setupSearchObserver() {
