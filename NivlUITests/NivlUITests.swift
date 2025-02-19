@@ -27,8 +27,17 @@ final class NivlUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let collectionView = app.collectionViews.firstMatch
+        XCTAssertTrue(collectionView.waitForExistence(timeout: 10))
+        
+        let cell = collectionView.cells.firstMatch
+        XCTAssertTrue(cell.waitForExistence(timeout: 10))
+        
+        cell.tap()
+        
+        let detailView = app.otherElements["DetailView"]
+        XCTAssertTrue(detailView.exists, "Detail did not appear")
     }
 
     @MainActor

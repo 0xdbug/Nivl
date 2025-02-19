@@ -20,13 +20,6 @@ class AppCoordinator: Coordinator {
     func start() {
         let home = HomeViewController.instantiate()
         home.coordinator = self
-        
-        let searchController = UISearchController()
-        navigationController.navigationItem.searchController = searchController
-        
-        home.title = "Nivl"
-        home.navigationItem.searchController = searchController
-        
         navigationController.pushViewController(home, animated: true)
     }
     

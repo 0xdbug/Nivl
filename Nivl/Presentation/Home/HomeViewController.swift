@@ -21,9 +21,18 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         setupSearchObserver()
         setupCollectionView()
         setupCollectionViewTapHandling()
+    }
+    
+    func setupView() {
+        let searchController = UISearchController()
+        navigationController!.navigationItem.searchController = searchController
+        
+        title = "Nivl"
+        navigationItem.searchController = searchController
     }
     
     func setupCollectionView() {

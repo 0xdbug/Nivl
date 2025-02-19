@@ -16,6 +16,11 @@ class DetailViewController: UIViewController, Storyboarded {
     
     public var viewModel: DetailViewModel! = nil
     
+    override func viewWillAppear(_ animated: Bool) {
+        title = viewModel.item.value.nasaId
+        view.accessibilityIdentifier = "DetailView"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

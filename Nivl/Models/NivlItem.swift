@@ -14,14 +14,15 @@ struct NivlItem {
     let date: String
     let title: String
     let description: String
+    let nasaId: String
     
     var headerImageURL: URL {
         URL(string: headerImage) ?? URL(string: "")!
     }
     
     static let sample: [NivlItem] = {
-        let sam = NivlItem(headerImage: "https://nasa-api-explorer.vercel.app/_next/image?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA22350%2FPIA22350~small.jpg&w=3840&q=75", date: "2025-03-4", title: "Kepler Beyond Planets: Finding Exploding Stars (Core Collapse Supernova)", description: "test")
-        let sa = NivlItem(headerImage: "https://nasa-api-explorer.vercel.app/_next/image?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA06909%2FPIA06909~medium.jpg&w=3840&q=75", date: "2025-03-4", title: "Kepler Supernova Remnant: A View from Hubble Space Telescope", description: "test")
+        let sam = NivlItem(headerImage: "https://nasa-api-explorer.vercel.app/_next/image?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA22350%2FPIA22350~small.jpg&w=3840&q=75", date: "2025-03-4", title: "Kepler Beyond Planets: Finding Exploding Stars (Core Collapse Supernova)", description: "test", nasaId: "1")
+        let sa = NivlItem(headerImage: "https://nasa-api-explorer.vercel.app/_next/image?url=https%3A%2F%2Fimages-assets.nasa.gov%2Fimage%2FPIA06909%2FPIA06909~medium.jpg&w=3840&q=75", date: "2025-03-4", title: "Kepler Supernova Remnant: A View from Hubble Space Telescope", description: "test", nasaId: "2")
         
         
         return [sam, sa, sam, sa, sam, sa, sam, sa, sam, sa, sam, sa]

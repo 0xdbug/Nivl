@@ -6,12 +6,12 @@
 //
 
 import Testing
+import RxSwift
 @testable import Nivl
 
 struct NivlTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    
+    @Test func testAPI() async throws {
+        
     }
-
 }

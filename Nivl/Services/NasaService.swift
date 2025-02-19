@@ -38,7 +38,7 @@ class NasaService {
                             let imageLink = item.links.first(where: { $0.render == "image" })?.href else {
                         return nil
                     }
-                    return NivlItem(headerImage: imageLink, date: data.dateCreated, title: data.title, description: data.description)
+                    return NivlItem(headerImage: imageLink, date: data.dateCreated, title: data.title, description: data.description, nasaId: data.nasaId)
                 }
             }
             .catch { error in
