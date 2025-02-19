@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.fetchItems()
+        viewModel.search(query: "Supernova")
         setupCollectionView()
     }
     

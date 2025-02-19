@@ -9,11 +9,22 @@ import RxSwift
 import RxCocoa
 
 class HomeViewModel {
+    private let disposeBag = DisposeBag()
     let items = BehaviorRelay<[NivlItem]>(value: [])
     
-    func fetchItems() {
-        //
-        self.items.accept(NivlItem.sample)
+    func search(query: String) {
+        NasaService.search(searchText: query)
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onNext: { [weak self] items in
+                    print(items)
+                    self?.items.accept(items)
+                },
+                onError: { [weak self] error in
+                    print("\(error)")
+                    self?.items.accept([])
+                }
+            )
+            .disposed(by: disposeBag)
     }
-    
 }
