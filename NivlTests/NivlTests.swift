@@ -10,8 +10,5 @@ import RxSwift
 @testable import Nivl
 
 struct NivlTests {
-    
-    @Test func testAPI() async throws {
-        
-    }
+
 }

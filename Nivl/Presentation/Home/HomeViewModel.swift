@@ -8,12 +8,20 @@
 import RxSwift
 import RxCocoa
 
+protocol NasaServiceProtocol {
+    func search(searchText: String) -> Observable<[NivlItem]>
+}
+
+extension NasaService: NasaServiceProtocol {}
+
 class HomeViewModel {
+    var nasaService: NasaServiceProtocol = NasaService()
+    
     private let disposeBag = DisposeBag()
     let items = BehaviorRelay<[NivlItem]>(value: [])
     
     func search(query: String) {
-        NasaService.search(searchText: query)
+        nasaService.search(searchText: query)
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { [weak self] items in

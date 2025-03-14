@@ -11,6 +11,10 @@
 		700670E32D6601A600AA0F86 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 700670E22D6601A600AA0F86 /* RxSwift */; };
 		70639C692D6603DB0031E02D /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 70639C682D6603DB0031E02D /* Nuke */; };
 		70639C6B2D6603DB0031E02D /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 70639C6A2D6603DB0031E02D /* NukeUI */; };
+		70B80D402D848D940087EC2D /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 70B80D3F2D848D940087EC2D /* RxTest */; };
+		70EBA7BD2D84584A001BF7FD /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 70EBA7BC2D84584A001BF7FD /* Quick */; };
+		70EBA7BF2D84584A001BF7FD /* QuickLint in Frameworks */ = {isa = PBXBuildFile; productRef = 70EBA7BE2D84584A001BF7FD /* QuickLint */; };
+		70EBA7CD2D847056001BF7FD /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 70EBA7CC2D847056001BF7FD /* Nimble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B80D402D848D940087EC2D /* RxTest in Frameworks */,
+				70EBA7BD2D84584A001BF7FD /* Quick in Frameworks */,
+				70EBA7CD2D847056001BF7FD /* Nimble in Frameworks */,
+				70EBA7BF2D84584A001BF7FD /* QuickLint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +151,11 @@
 			);
 			name = NivlTests;
 			packageProductDependencies = (
+				70EBA7BC2D84584A001BF7FD /* Quick */,
+				70EBA7BE2D84584A001BF7FD /* QuickLint */,
+				70EBA7C02D84584A001BF7FD /* quicklint */,
+				70EBA7CC2D847056001BF7FD /* Nimble */,
+				70B80D3F2D848D940087EC2D /* RxTest */,
 			);
 			productName = NivlTests;
 			productReference = 704718982D64F17B00796C4D /* NivlTests.xctest */;
@@ -179,6 +192,8 @@
 			packageReferences = (
 				700670DF2D6601A600AA0F86 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				70639C672D6603DB0031E02D /* XCRemoteSwiftPackageReference "Nuke" */,
+				70EBA7BB2D84584A001BF7FD /* XCRemoteSwiftPackageReference "Quick" */,
+				70EBA7CB2D847056001BF7FD /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 704718832D64F17800796C4D /* Products */;
@@ -500,6 +515,22 @@
 				minimumVersion = 12.8.0;
 			};
 		};
+		70EBA7BB2D84584A001BF7FD /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		70EBA7CB2D847056001BF7FD /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -522,6 +553,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70639C672D6603DB0031E02D /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
+		};
+		70B80D3F2D848D940087EC2D /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 700670DF2D6601A600AA0F86 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		70EBA7BC2D84584A001BF7FD /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70EBA7BB2D84584A001BF7FD /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		70EBA7BE2D84584A001BF7FD /* QuickLint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70EBA7BB2D84584A001BF7FD /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = QuickLint;
+		};
+		70EBA7C02D84584A001BF7FD /* quicklint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70EBA7BB2D84584A001BF7FD /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = quicklint;
+		};
+		70EBA7CC2D847056001BF7FD /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70EBA7CB2D847056001BF7FD /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
