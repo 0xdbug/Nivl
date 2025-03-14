@@ -21,19 +21,12 @@
 			remoteGlobalIDString = 704718812D64F17800796C4D;
 			remoteInfo = Nivl;
 		};
-		704718A32D64F17B00796C4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7047187A2D64F17800796C4D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 704718812D64F17800796C4D;
-			remoteInfo = Nivl;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		704718822D64F17800796C4D /* Nivl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nivl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704718982D64F17B00796C4D /* NivlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NivlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		704718A22D64F17B00796C4D /* NivlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NivlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		707CD9C72D84505800D2E857 /* Nivl.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Nivl.xctestplan; path = ../Nivl.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -60,11 +53,6 @@
 			path = NivlTests;
 			sourceTree = "<group>";
 		};
-		704718A52D64F17B00796C4D /* NivlUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NivlUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,22 +74,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7047189F2D64F17B00796C4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		704718792D64F17800796C4D = {
 			isa = PBXGroup;
 			children = (
+				707CD9C72D84505800D2E857 /* Nivl.xctestplan */,
 				704718842D64F17800796C4D /* Nivl */,
 				7047189B2D64F17B00796C4D /* NivlTests */,
-				704718A52D64F17B00796C4D /* NivlUITests */,
 				704718832D64F17800796C4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +92,6 @@
 			children = (
 				704718822D64F17800796C4D /* Nivl.app */,
 				704718982D64F17B00796C4D /* NivlTests.xctest */,
-				704718A22D64F17B00796C4D /* NivlUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,29 +148,6 @@
 			productReference = 704718982D64F17B00796C4D /* NivlTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		704718A12D64F17B00796C4D /* NivlUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 704718B32D64F17B00796C4D /* Build configuration list for PBXNativeTarget "NivlUITests" */;
-			buildPhases = (
-				7047189E2D64F17B00796C4D /* Sources */,
-				7047189F2D64F17B00796C4D /* Frameworks */,
-				704718A02D64F17B00796C4D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				704718A42D64F17B00796C4D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				704718A52D64F17B00796C4D /* NivlUITests */,
-			);
-			name = NivlUITests;
-			packageProductDependencies = (
-			);
-			productName = NivlUITests;
-			productReference = 704718A22D64F17B00796C4D /* NivlUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +162,6 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					704718972D64F17B00796C4D = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 704718812D64F17800796C4D;
-					};
-					704718A12D64F17B00796C4D = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 704718812D64F17800796C4D;
 					};
@@ -234,7 +187,6 @@
 			targets = (
 				704718812D64F17800796C4D /* Nivl */,
 				704718972D64F17B00796C4D /* NivlTests */,
-				704718A12D64F17B00796C4D /* NivlUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,13 +200,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		704718962D64F17B00796C4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		704718A02D64F17B00796C4D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,13 +223,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7047189E2D64F17B00796C4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -292,11 +230,6 @@
 			isa = PBXTargetDependency;
 			target = 704718812D64F17800796C4D /* Nivl */;
 			targetProxy = 704718992D64F17B00796C4D /* PBXContainerItemProxy */;
-		};
-		704718A42D64F17B00796C4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 704718812D64F17800796C4D /* Nivl */;
-			targetProxy = 704718A32D64F17B00796C4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -518,40 +451,6 @@
 			};
 			name = Release;
 		};
-		704718B42D64F17B00796C4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HGYNZXM7W6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dbug.NivlUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Nivl;
-			};
-			name = Debug;
-		};
-		704718B52D64F17B00796C4D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HGYNZXM7W6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dbug.NivlUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Nivl;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,15 +477,6 @@
 			buildConfigurations = (
 				704718B12D64F17B00796C4D /* Debug */,
 				704718B22D64F17B00796C4D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		704718B32D64F17B00796C4D /* Build configuration list for PBXNativeTarget "NivlUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				704718B42D64F17B00796C4D /* Debug */,
-				704718B52D64F17B00796C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
