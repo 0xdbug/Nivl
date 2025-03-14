@@ -5,12 +5,11 @@
 //  Created by dbug on 3/14/25.
 //
 
-import Foundation
 import Quick
 import Nimble
 import RxSwift
-@testable import Nivl
 import RxTest
+@testable import Nivl
 
 class HomeViewModelSpec: QuickSpec {
     override class func spec() {
@@ -45,10 +44,9 @@ class HomeViewModelSpec: QuickSpec {
                 }
             }
             
-            // x
             // searching with empty query should not make API call
-            xcontext("with empty query") {
-                xit("should not make API call") {
+            context("with empty query") {
+                it("should not make API call") {
                     viewModel.search(query: "")
                     expect(mockService.searchCalled).to(beFalse())
                 }

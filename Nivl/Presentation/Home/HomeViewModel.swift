@@ -21,6 +21,9 @@ class HomeViewModel {
     let items = BehaviorRelay<[NivlItem]>(value: [])
     
     func search(query: String) {
+        guard !query.isEmpty else {
+            return
+        }
         nasaService.search(searchText: query)
             .observe(on: MainScheduler.instance)
             .subscribe(
