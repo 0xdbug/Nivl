@@ -13,7 +13,7 @@ import RxTest
 
 class HomeViewModelSpec: QuickSpec {
     override class func spec() {
-        // searching with query should update items
+        // searching with any query should update items
         describe("searching") {
             var viewModel: HomeViewModel!
             var mockService: MockNasaService!
@@ -34,12 +34,12 @@ class HomeViewModelSpec: QuickSpec {
                 viewModel.items.bind(to: observer).disposed(by: disposeBag)
             }
             
-            context("with query") {
+            context("with any query") {
                 it("should update items") {
                     let expected = NivlItem.sample
                     mockService.searchResult = .just(expected)
                     
-                    viewModel.search(query: "mars")
+                    viewModel.search(query: "anything")
                     expect(observer.events.last?.value.element).toEventually(equal(expected))
                 }
             }
