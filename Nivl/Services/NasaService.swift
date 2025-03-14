@@ -22,7 +22,7 @@ class NasaService {
     private static let jsonDecoder = JSONDecoder()
     
     // i think i did good. for now
-    static func search(searchText: String) -> Observable<[NivlItem]> {
+    func search(searchText: String) -> Observable<[NivlItem]> {
         guard let query = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let url = URL(string: NasaAPI.baseURLString + NasaAPI.searchEndPoint + query) else {
             return Observable.error(APIError.failure) // meh
@@ -30,7 +30,7 @@ class NasaService {
         
         return URLSession.shared.rx.data(request: URLRequest(url: url))
             .map { data -> NasaResponse in
-                try jsonDecoder.decode(NasaResponse.self, from: data)
+                try NasaService.jsonDecoder.decode(NasaResponse.self, from: data)
             }
             .map { response -> [NivlItem] in
                 response.collection.items.compactMap { item -> NivlItem? in

@@ -1,6 +1,8 @@
 # Nivl
 RxSwift MVVM-C
 
+**Tests**: Quick & Nimble, RxTest
+
 It uses **N**asa's API to search its **I**mage and **V**ideo **L**ibrary.
 
 ## Screenshots
